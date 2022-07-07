@@ -1,0 +1,227 @@
+body {
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #F2F4F7;
+}
+
+// 一定要约束一下，当我们屏幕大于 750px 的时候，html变成的字体就 75px
+@media screen and (min-width:750px) {
+    html {
+        // 因为flexible.js 里面他划分的份数是10份 所以 是75     750 / 10 = 75
+        font-size: 75px !important;
+    }
+}
+
+
+// 头部区域
+.header {
+    width: 100%;
+    height: 1.0667rem;
+    border-bottom: solid .0133rem #EAEAEA;
+    font-size: .4667rem;
+    line-height:1.0667rem;
+    font-family: Microsoft YaHei;
+    text-align: center;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: .5733rem 0;
+    .item {
+        margin-bottom: .8rem;
+        display: flex;
+        a {
+            flex: 1;
+            height: 2.4667rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 1.8533rem;
+            }
+
+            p {
+                font-size: .3333rem;
+                color: #707070;
+                font-family: Arial;
+            }
+        }
+    }
+    .nav-img{
+        display: flex;
+        justify-content: center;
+        img {
+            width: 9.6267rem;
+        }
+    }
+    
+}
+
+
+// 就业指导模块
+.content{
+    overflow: hidden;
+    padding: .5333rem .2667rem;
+    margin-top: .1333rem;
+    background: #fff;
+    margin-bottom: 1.4667rem;
+    .content-hd{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .4533rem;
+        >div{
+            font-size: .3733rem;
+            color: #333333;
+            font-weight: 700;
+            font-family: Microsoft YaHei;
+            display: flex;
+            align-items: center;
+            img{
+                width: .5067rem;
+                margin-right: .24rem;
+            }
+        }
+        a{
+            font-size: .2933rem;
+            color: #999999;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+        }
+    }
+}
+
+// 旋转木马轮播图模块
+.get_job_focus{
+    position: relative;
+    .get_job_fo{
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        width: 7.2rem;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.8);
+        opacity: 0.4;
+        a{
+            width: 4.5067rem;
+            height: 5.0133rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p{
+            width: 4.5067rem;
+            font-size: .3333rem;
+            color: #333333;
+            margin-top: .32rem;
+        }
+      }
+      .swiper-slide-active,.swiper-slide-duplicate-active{
+        transform: scale(1);
+        z-index: 999;
+        opacity: 1;
+      }
+}
+
+
+
+// 手动轮播图模块
+.study{
+    .study_fo{
+        padding: .1333rem;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+
+        width: 3.8667rem;
+        height: 4.5333rem;
+        border-radius: .1333rem;
+        box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+
+        h5{
+            font-size: .3733rem;
+            margin: .2667rem 0;
+            padding: 0 .1333rem;
+            font-weight: 400;
+        }
+
+        p{
+            color: #FF4400;
+            font-size: .3467rem;
+            margin-left: .1333rem;
+        }
+
+      }
+
+}
+
+.content:nth-of-type(1){
+    margin-bottom: 0;
+}
+
+
+
+// 底部模块
+.footer{
+    width: 100%;
+    height: 1.4667rem;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    border-top: #E2E2E2 1px solid;
+    display: flex;
+    a{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: .52rem;
+            height: .5467rem;
+        }
+        p{
+            font-size: .2933rem;
+            color: #666666;
+            margin-top: .1467rem;
+        }
+    }
+}
